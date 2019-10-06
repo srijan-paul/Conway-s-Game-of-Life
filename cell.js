@@ -8,13 +8,12 @@ class Cell {
   }
 
   show() {
-    fill(255, 255, 255);
-    stroke(0,0,0);
-    rect(this.x, this.y, this.x + cellWidth, this.y + cellWidth);
-  }
-
-  highlight() {
-    fill(200, 0, 255);
+    if (this.alive) {
+      fill(0, 100, 200);
+    } else {
+      fill(255, 255, 255);
+    }
+    
     rect(this.x, this.y, this.x + cellWidth, this.y + cellWidth);
   }
 
